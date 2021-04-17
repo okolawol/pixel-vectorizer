@@ -40,9 +40,9 @@ def main():
     pixel_image = cv2.resize(downscaled_filtered, (width, height), interpolation=cv2.INTER_NEAREST)
 
 
-    cv2.imwrite("pixel_art.png",pixel_image)
-    cv2.imwrite("downscaled.png",downscaled)
-    cv2.imwrite("downscaled_filtered.png",downscaled_filtered)
+    cv2.imwrite("outputs/pixel_art.png",pixel_image)
+    cv2.imwrite("outputs/downscaled.png",downscaled)
+    cv2.imwrite("outputs/downscaled_filtered.png",downscaled_filtered)
 
 if __name__ == "__main__":
     main()
