@@ -60,7 +60,7 @@ def is_half_intensity(value):
 	return value >= 0.49 and value <= 0.59
 
 def no_dupes(region):
-	diff_threshold = 0.01
+	diff_threshold = 0.019
 	color_diff_left = abs(region[0] - region[1])
 	color_diff_right = abs(region[1] - region[2])
 	if (color_diff_left < diff_threshold) or (color_diff_right < diff_threshold):
