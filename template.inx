@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+
+  <_name>Pixel Animation Editor</_name>
+  <id>juliaread.sfucmpt985.pixelanimation</id>
+  <dependency type="executable" location="extensions">pixelanimation.py</dependency>
+
+  <param name="radio" type="optiongroup" _gui-text="Select action: ">
+    <option value="export">Export frame</option>
+    <option value="create">Create animation</option>
+  </param>
+
+  <param name="colors" type="int" min="1" max="20" _gui-text="# possible colors: ">5</param>
+  <param name="output_size" type="int" min="32" max="500" _gui-text="Output size: ">64</param>
+  <param name="anim_speed" type="int" min="100" max="1000" _gui-text="Animation speed: ">400</param>
+
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu _name="Pixel Animation"/>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">pixelanimation.py</command>
+  </script>
+
+</inkscape-extension>
